@@ -1,0 +1,79 @@
+/* Table.css */
+
+.table-container {
+  width: 100%;
+  padding: 1rem;
+}
+
+.table-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.table-header .input-filter {
+  max-width: 300px;
+}
+
+.table-header .dropdown-menu {
+  margin-left: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f9f9f9;
+  font-weight: bold;
+}
+
+.table td {
+  background-color: #fff;
+}
+
+.table .text-right {
+  text-align: right;
+}
+
+.table .font-medium {
+  font-weight: 500;
+}
+
+.table .capitalize {
+  text-transform: capitalize;
+}
+
+.table .lowercase {
+  text-transform: lowercase;
+}
+
+.table .selected {
+  background-color: #e6f7ff;
+}
+
+.table-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.table-footer .text-muted-foreground {
+  color: #6c757d;
+}
+
+.table-footer .pagination-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
