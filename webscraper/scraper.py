@@ -47,9 +47,10 @@ password.send_keys(Keys.RETURN)
 sleep(sleeptime)
 print("logged in")
 
-def search_twitter(driver, keyword, n_tweets=10):
+def search_twitter(driver, keyword, n_tweets=10, min_likes=100):
+    search_phrase = f'{keyword} min_faves:{min_likes}'
     search_box = driver.find_element(By.XPATH, "//input[@aria-label='Search query']")
-    search_box.send_keys(keyword)
+    search_box.send_keys(search_phrase)
     search_box.send_keys(Keys.RETURN)
     sleep(5)
     
@@ -61,7 +62,9 @@ def search_twitter(driver, keyword, n_tweets=10):
     while len(tweets) < n_tweets:
         tweet_elements = driver.find_elements(By.XPATH, "//div[@data-testid='tweetText']")
         for tweet in tweet_elements:
+
             tweets.add(tweet.text)
+            
             if len(tweets) >= n_tweets:
                 break
         
@@ -78,7 +81,7 @@ def search_twitter(driver, keyword, n_tweets=10):
         resultsfile.write(tweet + "\n")
         resultsfile.write("-----------------------------------\n")
 
-search_twitter(driver, "solana")
+search_twitter(driver, "solana market")
 print("search successful")
 
 sleep(10)
