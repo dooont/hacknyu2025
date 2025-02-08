@@ -1,0 +1,154 @@
+# env file
+.env
+
+# .gitignore
+# Python virtual environment
+venv/
+env/
+ENV/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Environment variables
+.env
+.env.local
+
+# Logs
+*.log
+
+# Hugging Face cache and downloaded models
+.cache/
+cache/
+*.bin
+*.pt
+
+# Local development settings
+*.sqlite3
+.coverage
+
+# install.sh
+#!/bin/bash
+
+# Function to check if command exists
+command_exists() {
+    command -v "$1" >/dev/null 2>&1
+}
+
+echo "🚀 Starting installation process..."
+
+# Check Python version
+if ! command_exists python3; then
+    echo "❌ Python 3 is not installed. Please install Python 3.11 or later."
+    exit 1
+fi
+
+# Create virtual environment if it doesn't exist
+if [ ! -d "venv" ]; then
+    echo "🔧 Creating virtual environment..."
+    python3 -m venv venv
+else
+    echo "✅ Virtual environment already exists"
+fi
+
+# Activate virtual environment
+echo "🔧 Activating virtual environment..."
+source venv/bin/activate
+
+# Upgrade pip
+echo "🔄 Upgrading pip..."
+python3 -m pip install --upgrade pip
+
+# Install requirements
+echo "📦 Installing required packages..."
+python3 -m pip install fastapi uvicorn torch torchvision torchaudio transformers pydantic
+
+# Create a requirements.txt file
+echo "📝 Creating requirements.txt..."
+python3 -m pip freeze > requirements.txt
+
+echo """
+✨ Installation complete! ✨
+
+To start the server:
+1. Activate the virtual environment (if not already activated):
+   source venv/bin/activate
+   
+2. Run the server:
+   python3 -m uvicorn main:app --reload
+
+The API will be available at http://localhost:8000
+Documentation will be available at http://localhost:8000/docs
+"""
+
+# README.md
+# CryptoBERT Sentiment Analysis API
+
+This project provides a FastAPI-based API for cryptocurrency sentiment analysis using the CryptoBERT model.
+
+## Setup
+
+1. Clone the repository:
+   ```bash
+   git clone <your-repository-url>
+   cd <repository-name>
+   ```
+
+2. Run the installation script:
+   ```bash
+   chmod +x install.sh
+   ./install.sh
+   ```
+
+## Usage
+
+1. Activate the virtual environment:
+   ```bash
+   source venv/bin/activate
+   ```
+
+2. Start the server:
+   ```bash
+   python3 -m uvicorn main:app --reload
+   ```
+
+3. Access the API:
+   - API endpoint: http://localhost:8000
+   - API documentation: http://localhost:8000/docs
+
+## API Endpoints
+
+- POST /predict: Analyze sentiment of cryptocurrency-related texts
+- GET /health: Check API health status
+
+## Example Usage
+
+```python
+import requests
+
+url = "http://localhost:8000/predict"
+data = {
+    "texts": [
+        "Bitcoin is looking very bullish today!",
+        "The market is crashing hard"
+    ]
+}
+
+response = requests.post(url, json=data)
+print(response.json())
+```
