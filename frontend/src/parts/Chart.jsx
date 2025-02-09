@@ -16,6 +16,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import { Button } from "@/components/ui/button";
 
 const chartData = [
   { month: "January", desktop: 186 },
@@ -72,13 +73,22 @@ export default function Chart() {
           </LineChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="card-footer">
-        <div className="trending-up">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
-        </div>
-        <div className="muted-text">
-          Showing total visitors for the last 6 months
-        </div>
+      <CardFooter className="card-footer flex space-x-2">
+        <Button>
+          Real Time
+        </Button >
+        <Button >
+          1 Day
+        </Button>
+        <Button >
+          1 Week
+        </Button>
+        <Button >
+          1 Month
+        </Button>
+        <Button >
+          1 Year
+        </Button>
       </CardFooter>
     </Card>
   );

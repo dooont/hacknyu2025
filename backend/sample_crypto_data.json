@@ -1,0 +1,2822 @@
+[
+  {
+    "type": "neutral",
+    "coefficient": 0.01,
+    "followC": 1084,
+    "likeC": 1923,
+    "viewC": 97580,
+    "date": "2025-02-08T23:38:25.043640Z",
+    "coinType": [
+      "Cosmos",
+      "ATOM"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.15,
+    "followC": 2208,
+    "likeC": 946,
+    "viewC": 33758,
+    "date": "2025-02-07T23:38:25.043640Z",
+    "coinType": [
+      "Monero",
+      "XMR"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.58,
+    "followC": 3763,
+    "likeC": 445,
+    "viewC": 68447,
+    "date": "2025-02-06T23:38:25.043640Z",
+    "coinType": [
+      "Avalanche",
+      "AVAX"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.59,
+    "followC": 1308,
+    "likeC": 456,
+    "viewC": 13764,
+    "date": "2025-02-05T23:38:25.043640Z",
+    "coinType": [
+      "Uniswap",
+      "UNI"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.23,
+    "followC": 194,
+    "likeC": 854,
+    "viewC": 65722,
+    "date": "2025-02-04T23:38:25.043640Z",
+    "coinType": [
+      "Tron",
+      "TRX"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.36,
+    "followC": 4096,
+    "likeC": 131,
+    "viewC": 60078,
+    "date": "2025-02-03T23:38:25.043640Z",
+    "coinType": [
+      "Chainlink",
+      "LINK"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.93,
+    "followC": 2153,
+    "likeC": 926,
+    "viewC": 53911,
+    "date": "2025-02-02T23:38:25.043640Z",
+    "coinType": [
+      "Solana",
+      "SOL"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.5,
+    "followC": 2074,
+    "likeC": 395,
+    "viewC": 38276,
+    "date": "2025-02-01T23:38:25.043640Z",
+    "coinType": [
+      "Stellar",
+      "XLM"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.0,
+    "followC": 4378,
+    "likeC": 313,
+    "viewC": 40552,
+    "date": "2025-01-31T23:38:25.043640Z",
+    "coinType": [
+      "Stellar",
+      "XLM"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.21,
+    "followC": 1078,
+    "likeC": 1760,
+    "viewC": 20098,
+    "date": "2025-01-30T23:38:25.043640Z",
+    "coinType": [
+      "Stellar",
+      "XLM"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.96,
+    "followC": 3552,
+    "likeC": 812,
+    "viewC": 46195,
+    "date": "2025-01-29T23:38:25.043640Z",
+    "coinType": [
+      "Tezos",
+      "XTZ"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.5,
+    "followC": 3409,
+    "likeC": 328,
+    "viewC": 42558,
+    "date": "2025-01-28T23:38:25.043640Z",
+    "coinType": [
+      "Solana",
+      "SOL"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.71,
+    "followC": 1186,
+    "likeC": 99,
+    "viewC": 59891,
+    "date": "2025-01-27T23:38:25.043640Z",
+    "coinType": [
+      "Chainlink",
+      "LINK"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.95,
+    "followC": 858,
+    "likeC": 1290,
+    "viewC": 54702,
+    "date": "2025-01-26T23:38:25.043640Z",
+    "coinType": [
+      "Solana",
+      "SOL"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.41,
+    "followC": 1075,
+    "likeC": 608,
+    "viewC": 86017,
+    "date": "2025-01-25T23:38:25.043640Z",
+    "coinType": [
+      "Stellar",
+      "XLM"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.58,
+    "followC": 1548,
+    "likeC": 1238,
+    "viewC": 79285,
+    "date": "2025-01-24T23:38:25.043640Z",
+    "coinType": [
+      "Tron",
+      "TRX"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.44,
+    "followC": 788,
+    "likeC": 277,
+    "viewC": 74322,
+    "date": "2025-01-23T23:38:25.043640Z",
+    "coinType": [
+      "Cardano",
+      "ADA"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.51,
+    "followC": 2400,
+    "likeC": 1894,
+    "viewC": 61363,
+    "date": "2025-01-22T23:38:25.043640Z",
+    "coinType": [
+      "Cardano",
+      "ADA"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.09,
+    "followC": 957,
+    "likeC": 1463,
+    "viewC": 38160,
+    "date": "2025-01-21T23:38:25.043640Z",
+    "coinType": [
+      "Ethereum",
+      "ETH"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.61,
+    "followC": 3822,
+    "likeC": 1300,
+    "viewC": 79021,
+    "date": "2025-01-20T23:38:25.043640Z",
+    "coinType": [
+      "Uniswap",
+      "UNI"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.69,
+    "followC": 4160,
+    "likeC": 1861,
+    "viewC": 91557,
+    "date": "2025-01-19T23:38:25.043640Z",
+    "coinType": [
+      "Solana",
+      "SOL"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.73,
+    "followC": 555,
+    "likeC": 510,
+    "viewC": 1887,
+    "date": "2025-01-18T23:38:25.043640Z",
+    "coinType": [
+      "VeChain",
+      "VET"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.73,
+    "followC": 1707,
+    "likeC": 903,
+    "viewC": 60253,
+    "date": "2025-01-17T23:38:25.043640Z",
+    "coinType": [
+      "Ethereum",
+      "ETH"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.37,
+    "followC": 3852,
+    "likeC": 1855,
+    "viewC": 46644,
+    "date": "2025-01-16T23:38:25.043640Z",
+    "coinType": [
+      "Cardano",
+      "ADA"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.4,
+    "followC": 1125,
+    "likeC": 1908,
+    "viewC": 93229,
+    "date": "2025-01-15T23:38:25.043640Z",
+    "coinType": [
+      "Cardano",
+      "ADA"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.8,
+    "followC": 3889,
+    "likeC": 1718,
+    "viewC": 66906,
+    "date": "2025-01-14T23:38:25.043640Z",
+    "coinType": [
+      "Ethereum",
+      "ETH"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.14,
+    "followC": 3429,
+    "likeC": 901,
+    "viewC": 65873,
+    "date": "2025-01-13T23:38:25.043640Z",
+    "coinType": [
+      "Cardano",
+      "ADA"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.9,
+    "followC": 4871,
+    "likeC": 1891,
+    "viewC": 6372,
+    "date": "2025-01-12T23:38:25.043640Z",
+    "coinType": [
+      "Aave",
+      "AAVE"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.12,
+    "followC": 1152,
+    "likeC": 1890,
+    "viewC": 37636,
+    "date": "2025-01-11T23:38:25.043640Z",
+    "coinType": [
+      "Ethereum",
+      "ETH"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.79,
+    "followC": 2957,
+    "likeC": 903,
+    "viewC": 38721,
+    "date": "2025-01-10T23:38:25.043640Z",
+    "coinType": [
+      "Monero",
+      "XMR"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.1,
+    "followC": 2149,
+    "likeC": 78,
+    "viewC": 35758,
+    "date": "2025-01-09T23:38:25.043640Z",
+    "coinType": [
+      "Stellar",
+      "XLM"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.96,
+    "followC": 1435,
+    "likeC": 857,
+    "viewC": 62502,
+    "date": "2025-01-08T23:38:25.043640Z",
+    "coinType": [
+      "Dogecoin",
+      "DOGE"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.86,
+    "followC": 3562,
+    "likeC": 1828,
+    "viewC": 66556,
+    "date": "2025-01-07T23:38:25.043640Z",
+    "coinType": [
+      "Solana",
+      "SOL"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.99,
+    "followC": 770,
+    "likeC": 1232,
+    "viewC": 32610,
+    "date": "2025-01-06T23:38:25.043640Z",
+    "coinType": [
+      "Cosmos",
+      "ATOM"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.82,
+    "followC": 2465,
+    "likeC": 1237,
+    "viewC": 55270,
+    "date": "2025-01-05T23:38:25.043640Z",
+    "coinType": [
+      "Polkadot",
+      "DOT"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.79,
+    "followC": 1300,
+    "likeC": 1871,
+    "viewC": 6959,
+    "date": "2025-01-04T23:38:25.043640Z",
+    "coinType": [
+      "Ripple",
+      "XRP"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.09,
+    "followC": 2991,
+    "likeC": 1174,
+    "viewC": 56471,
+    "date": "2025-01-03T23:38:25.043640Z",
+    "coinType": [
+      "Uniswap",
+      "UNI"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.29,
+    "followC": 4196,
+    "likeC": 1837,
+    "viewC": 51681,
+    "date": "2025-01-02T23:38:25.043640Z",
+    "coinType": [
+      "Cardano",
+      "ADA"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.37,
+    "followC": 757,
+    "likeC": 1629,
+    "viewC": 84957,
+    "date": "2025-01-01T23:38:25.043640Z",
+    "coinType": [
+      "Chainlink",
+      "LINK"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.05,
+    "followC": 2347,
+    "likeC": 159,
+    "viewC": 6839,
+    "date": "2024-12-31T23:38:25.043640Z",
+    "coinType": [
+      "Monero",
+      "XMR"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.84,
+    "followC": 1179,
+    "likeC": 472,
+    "viewC": 73239,
+    "date": "2024-12-30T23:38:25.043640Z",
+    "coinType": [
+      "Ripple",
+      "XRP"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.88,
+    "followC": 476,
+    "likeC": 604,
+    "viewC": 33705,
+    "date": "2024-12-29T23:38:25.043640Z",
+    "coinType": [
+      "Chainlink",
+      "LINK"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.68,
+    "followC": 4328,
+    "likeC": 1318,
+    "viewC": 66586,
+    "date": "2024-12-28T23:38:25.043640Z",
+    "coinType": [
+      "Uniswap",
+      "UNI"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.63,
+    "followC": 4170,
+    "likeC": 264,
+    "viewC": 5085,
+    "date": "2024-12-27T23:38:25.043640Z",
+    "coinType": [
+      "Avalanche",
+      "AVAX"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.76,
+    "followC": 1547,
+    "likeC": 1565,
+    "viewC": 98394,
+    "date": "2024-12-26T23:38:25.043640Z",
+    "coinType": [
+      "Polygon",
+      "MATIC"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.38,
+    "followC": 3184,
+    "likeC": 435,
+    "viewC": 82402,
+    "date": "2024-12-25T23:38:25.043640Z",
+    "coinType": [
+      "Bitcoin",
+      "BTC"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.51,
+    "followC": 3109,
+    "likeC": 114,
+    "viewC": 94708,
+    "date": "2024-12-24T23:38:25.043640Z",
+    "coinType": [
+      "Bitcoin Cash",
+      "BCH"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.52,
+    "followC": 3182,
+    "likeC": 1354,
+    "viewC": 89670,
+    "date": "2024-12-23T23:38:25.043640Z",
+    "coinType": [
+      "Tezos",
+      "XTZ"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.36,
+    "followC": 2887,
+    "likeC": 1613,
+    "viewC": 70577,
+    "date": "2024-12-22T23:38:25.043640Z",
+    "coinType": [
+      "Aave",
+      "AAVE"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.46,
+    "followC": 3437,
+    "likeC": 1968,
+    "viewC": 66767,
+    "date": "2024-12-21T23:38:25.043640Z",
+    "coinType": [
+      "VeChain",
+      "VET"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.35,
+    "followC": 1691,
+    "likeC": 1675,
+    "viewC": 83769,
+    "date": "2024-12-20T23:38:25.043640Z",
+    "coinType": [
+      "Chainlink",
+      "LINK"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.66,
+    "followC": 386,
+    "likeC": 1412,
+    "viewC": 76660,
+    "date": "2024-12-19T23:38:25.043640Z",
+    "coinType": [
+      "Bitcoin",
+      "BTC"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.97,
+    "followC": 2899,
+    "likeC": 1452,
+    "viewC": 69351,
+    "date": "2024-12-18T23:38:25.043640Z",
+    "coinType": [
+      "Dogecoin",
+      "DOGE"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.86,
+    "followC": 1107,
+    "likeC": 387,
+    "viewC": 75739,
+    "date": "2024-12-17T23:38:25.043640Z",
+    "coinType": [
+      "Chainlink",
+      "LINK"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.59,
+    "followC": 2942,
+    "likeC": 946,
+    "viewC": 21403,
+    "date": "2024-12-16T23:38:25.043640Z",
+    "coinType": [
+      "Polkadot",
+      "DOT"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.08,
+    "followC": 204,
+    "likeC": 1246,
+    "viewC": 76190,
+    "date": "2024-12-15T23:38:25.043640Z",
+    "coinType": [
+      "Cardano",
+      "ADA"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.15,
+    "followC": 1173,
+    "likeC": 105,
+    "viewC": 28344,
+    "date": "2024-12-14T23:38:25.043640Z",
+    "coinType": [
+      "Avalanche",
+      "AVAX"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.52,
+    "followC": 2067,
+    "likeC": 476,
+    "viewC": 36907,
+    "date": "2024-12-13T23:38:25.043640Z",
+    "coinType": [
+      "Cardano",
+      "ADA"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.92,
+    "followC": 3595,
+    "likeC": 261,
+    "viewC": 78261,
+    "date": "2024-12-12T23:38:25.043640Z",
+    "coinType": [
+      "Cardano",
+      "ADA"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.63,
+    "followC": 1272,
+    "likeC": 338,
+    "viewC": 51774,
+    "date": "2024-12-11T23:38:25.043640Z",
+    "coinType": [
+      "Stellar",
+      "XLM"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.82,
+    "followC": 4118,
+    "likeC": 308,
+    "viewC": 44973,
+    "date": "2024-12-10T23:38:25.043640Z",
+    "coinType": [
+      "Cardano",
+      "ADA"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.0,
+    "followC": 4202,
+    "likeC": 208,
+    "viewC": 41180,
+    "date": "2024-12-09T23:38:25.043640Z",
+    "coinType": [
+      "Bitcoin Cash",
+      "BCH"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.76,
+    "followC": 948,
+    "likeC": 1499,
+    "viewC": 45125,
+    "date": "2024-12-08T23:38:25.043640Z",
+    "coinType": [
+      "Chainlink",
+      "LINK"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.56,
+    "followC": 4872,
+    "likeC": 1672,
+    "viewC": 23577,
+    "date": "2024-12-07T23:38:25.043640Z",
+    "coinType": [
+      "Polygon",
+      "MATIC"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.14,
+    "followC": 3185,
+    "likeC": 319,
+    "viewC": 37892,
+    "date": "2024-12-06T23:38:25.043640Z",
+    "coinType": [
+      "VeChain",
+      "VET"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.22,
+    "followC": 2299,
+    "likeC": 718,
+    "viewC": 41366,
+    "date": "2024-12-05T23:38:25.043640Z",
+    "coinType": [
+      "Solana",
+      "SOL"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.18,
+    "followC": 4051,
+    "likeC": 914,
+    "viewC": 95044,
+    "date": "2024-12-04T23:38:25.043640Z",
+    "coinType": [
+      "Uniswap",
+      "UNI"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.38,
+    "followC": 4803,
+    "likeC": 1786,
+    "viewC": 9601,
+    "date": "2024-12-03T23:38:25.043640Z",
+    "coinType": [
+      "Chainlink",
+      "LINK"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.28,
+    "followC": 4520,
+    "likeC": 1474,
+    "viewC": 20378,
+    "date": "2024-12-02T23:38:25.043640Z",
+    "coinType": [
+      "Polygon",
+      "MATIC"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.78,
+    "followC": 1811,
+    "likeC": 1115,
+    "viewC": 21987,
+    "date": "2024-12-01T23:38:25.043640Z",
+    "coinType": [
+      "Polygon",
+      "MATIC"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.41,
+    "followC": 1245,
+    "likeC": 1393,
+    "viewC": 33768,
+    "date": "2024-11-30T23:38:25.043640Z",
+    "coinType": [
+      "Cardano",
+      "ADA"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.49,
+    "followC": 1887,
+    "likeC": 1379,
+    "viewC": 86309,
+    "date": "2024-11-29T23:38:25.043640Z",
+    "coinType": [
+      "Chainlink",
+      "LINK"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.93,
+    "followC": 2693,
+    "likeC": 345,
+    "viewC": 64716,
+    "date": "2024-11-28T23:38:25.043640Z",
+    "coinType": [
+      "Uniswap",
+      "UNI"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.04,
+    "followC": 2054,
+    "likeC": 365,
+    "viewC": 54052,
+    "date": "2024-11-27T23:38:25.043640Z",
+    "coinType": [
+      "Ethereum",
+      "ETH"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.29,
+    "followC": 4009,
+    "likeC": 1880,
+    "viewC": 59682,
+    "date": "2024-11-26T23:38:25.043640Z",
+    "coinType": [
+      "Avalanche",
+      "AVAX"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.6,
+    "followC": 2908,
+    "likeC": 1499,
+    "viewC": 38339,
+    "date": "2024-11-25T23:38:25.043640Z",
+    "coinType": [
+      "Solana",
+      "SOL"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.14,
+    "followC": 4630,
+    "likeC": 1962,
+    "viewC": 85688,
+    "date": "2024-11-24T23:38:25.043640Z",
+    "coinType": [
+      "Ripple",
+      "XRP"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.66,
+    "followC": 2084,
+    "likeC": 1440,
+    "viewC": 20375,
+    "date": "2024-11-23T23:38:25.043640Z",
+    "coinType": [
+      "Avalanche",
+      "AVAX"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.7,
+    "followC": 4732,
+    "likeC": 1698,
+    "viewC": 60597,
+    "date": "2024-11-22T23:38:25.043640Z",
+    "coinType": [
+      "Cardano",
+      "ADA"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.34,
+    "followC": 2732,
+    "likeC": 1093,
+    "viewC": 8462,
+    "date": "2024-11-21T23:38:25.043640Z",
+    "coinType": [
+      "Uniswap",
+      "UNI"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.25,
+    "followC": 1881,
+    "likeC": 327,
+    "viewC": 85389,
+    "date": "2024-11-20T23:38:25.043640Z",
+    "coinType": [
+      "Litecoin",
+      "LTC"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.62,
+    "followC": 272,
+    "likeC": 307,
+    "viewC": 76356,
+    "date": "2024-11-19T23:38:25.043640Z",
+    "coinType": [
+      "VeChain",
+      "VET"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.06,
+    "followC": 977,
+    "likeC": 1126,
+    "viewC": 33031,
+    "date": "2024-11-18T23:38:25.043640Z",
+    "coinType": [
+      "Cosmos",
+      "ATOM"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.64,
+    "followC": 1475,
+    "likeC": 1317,
+    "viewC": 70233,
+    "date": "2024-11-17T23:38:25.043640Z",
+    "coinType": [
+      "Bitcoin",
+      "BTC"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.02,
+    "followC": 1962,
+    "likeC": 756,
+    "viewC": 25121,
+    "date": "2024-11-16T23:38:25.043640Z",
+    "coinType": [
+      "Litecoin",
+      "LTC"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.23,
+    "followC": 2518,
+    "likeC": 1642,
+    "viewC": 48947,
+    "date": "2024-11-15T23:38:25.043640Z",
+    "coinType": [
+      "Litecoin",
+      "LTC"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.48,
+    "followC": 4549,
+    "likeC": 1034,
+    "viewC": 63884,
+    "date": "2024-11-14T23:38:25.043640Z",
+    "coinType": [
+      "Monero",
+      "XMR"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.43,
+    "followC": 3828,
+    "likeC": 510,
+    "viewC": 47601,
+    "date": "2024-11-13T23:38:25.043640Z",
+    "coinType": [
+      "Uniswap",
+      "UNI"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.92,
+    "followC": 986,
+    "likeC": 1813,
+    "viewC": 57503,
+    "date": "2024-11-12T23:38:25.043640Z",
+    "coinType": [
+      "Aave",
+      "AAVE"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.53,
+    "followC": 4558,
+    "likeC": 1130,
+    "viewC": 38141,
+    "date": "2024-11-11T23:38:25.043640Z",
+    "coinType": [
+      "Polkadot",
+      "DOT"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.58,
+    "followC": 1926,
+    "likeC": 642,
+    "viewC": 69079,
+    "date": "2024-11-10T23:38:25.043640Z",
+    "coinType": [
+      "Solana",
+      "SOL"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.4,
+    "followC": 2778,
+    "likeC": 759,
+    "viewC": 20995,
+    "date": "2024-11-09T23:38:25.043640Z",
+    "coinType": [
+      "Ethereum",
+      "ETH"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.25,
+    "followC": 1625,
+    "likeC": 1333,
+    "viewC": 64799,
+    "date": "2024-11-08T23:38:25.043640Z",
+    "coinType": [
+      "Dogecoin",
+      "DOGE"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.98,
+    "followC": 3912,
+    "likeC": 1109,
+    "viewC": 95432,
+    "date": "2024-11-07T23:38:25.043640Z",
+    "coinType": [
+      "Tezos",
+      "XTZ"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.15,
+    "followC": 4790,
+    "likeC": 1730,
+    "viewC": 35473,
+    "date": "2024-11-06T23:38:25.043640Z",
+    "coinType": [
+      "Chainlink",
+      "LINK"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.21,
+    "followC": 842,
+    "likeC": 1848,
+    "viewC": 1852,
+    "date": "2024-11-05T23:38:25.043640Z",
+    "coinType": [
+      "VeChain",
+      "VET"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.05,
+    "followC": 263,
+    "likeC": 819,
+    "viewC": 96082,
+    "date": "2024-11-04T23:38:25.043640Z",
+    "coinType": [
+      "Avalanche",
+      "AVAX"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.75,
+    "followC": 2697,
+    "likeC": 1289,
+    "viewC": 97297,
+    "date": "2024-11-03T23:38:25.043640Z",
+    "coinType": [
+      "Litecoin",
+      "LTC"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.47,
+    "followC": 4112,
+    "likeC": 338,
+    "viewC": 12356,
+    "date": "2024-11-02T23:38:25.043640Z",
+    "coinType": [
+      "Ripple",
+      "XRP"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.9,
+    "followC": 2914,
+    "likeC": 1772,
+    "viewC": 88222,
+    "date": "2024-11-01T23:38:25.043640Z",
+    "coinType": [
+      "Polygon",
+      "MATIC"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.66,
+    "followC": 723,
+    "likeC": 1011,
+    "viewC": 72411,
+    "date": "2024-10-31T23:38:25.043640Z",
+    "coinType": [
+      "Stellar",
+      "XLM"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.17,
+    "followC": 842,
+    "likeC": 1712,
+    "viewC": 45336,
+    "date": "2024-10-30T23:38:25.043640Z",
+    "coinType": [
+      "Bitcoin Cash",
+      "BCH"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.67,
+    "followC": 2422,
+    "likeC": 1971,
+    "viewC": 72010,
+    "date": "2024-10-29T23:38:25.043640Z",
+    "coinType": [
+      "Tezos",
+      "XTZ"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.51,
+    "followC": 2964,
+    "likeC": 665,
+    "viewC": 37045,
+    "date": "2024-10-28T23:38:25.043640Z",
+    "coinType": [
+      "Bitcoin",
+      "BTC"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.1,
+    "followC": 1735,
+    "likeC": 368,
+    "viewC": 12511,
+    "date": "2024-10-27T23:38:25.043640Z",
+    "coinType": [
+      "Bitcoin Cash",
+      "BCH"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.08,
+    "followC": 2723,
+    "likeC": 638,
+    "viewC": 76684,
+    "date": "2024-10-26T23:38:25.043640Z",
+    "coinType": [
+      "Polkadot",
+      "DOT"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.11,
+    "followC": 3680,
+    "likeC": 428,
+    "viewC": 24545,
+    "date": "2024-10-25T23:38:25.043640Z",
+    "coinType": [
+      "Aave",
+      "AAVE"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.63,
+    "followC": 4427,
+    "likeC": 515,
+    "viewC": 76920,
+    "date": "2024-10-24T23:38:25.043640Z",
+    "coinType": [
+      "Dogecoin",
+      "DOGE"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.11,
+    "followC": 285,
+    "likeC": 907,
+    "viewC": 97444,
+    "date": "2024-10-23T23:38:25.043640Z",
+    "coinType": [
+      "Ripple",
+      "XRP"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.3,
+    "followC": 3570,
+    "likeC": 73,
+    "viewC": 46236,
+    "date": "2024-10-22T23:38:25.043640Z",
+    "coinType": [
+      "Bitcoin",
+      "BTC"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.15,
+    "followC": 3512,
+    "likeC": 114,
+    "viewC": 28551,
+    "date": "2024-10-21T23:38:25.043640Z",
+    "coinType": [
+      "Uniswap",
+      "UNI"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.47,
+    "followC": 3788,
+    "likeC": 1936,
+    "viewC": 77593,
+    "date": "2024-10-20T23:38:25.043640Z",
+    "coinType": [
+      "VeChain",
+      "VET"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.98,
+    "followC": 4747,
+    "likeC": 1767,
+    "viewC": 76665,
+    "date": "2024-10-19T23:38:25.043640Z",
+    "coinType": [
+      "Tezos",
+      "XTZ"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.35,
+    "followC": 292,
+    "likeC": 305,
+    "viewC": 52985,
+    "date": "2024-10-18T23:38:25.043640Z",
+    "coinType": [
+      "Avalanche",
+      "AVAX"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.5,
+    "followC": 1982,
+    "likeC": 682,
+    "viewC": 25152,
+    "date": "2024-10-17T23:38:25.043640Z",
+    "coinType": [
+      "Tezos",
+      "XTZ"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.93,
+    "followC": 1017,
+    "likeC": 109,
+    "viewC": 70804,
+    "date": "2024-10-16T23:38:25.043640Z",
+    "coinType": [
+      "Cardano",
+      "ADA"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.8,
+    "followC": 701,
+    "likeC": 88,
+    "viewC": 64566,
+    "date": "2024-10-15T23:38:25.043640Z",
+    "coinType": [
+      "Ripple",
+      "XRP"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.34,
+    "followC": 4233,
+    "likeC": 754,
+    "viewC": 53970,
+    "date": "2024-10-14T23:38:25.043640Z",
+    "coinType": [
+      "Ripple",
+      "XRP"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.18,
+    "followC": 2060,
+    "likeC": 1149,
+    "viewC": 37149,
+    "date": "2024-10-13T23:38:25.043640Z",
+    "coinType": [
+      "Bitcoin",
+      "BTC"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.57,
+    "followC": 648,
+    "likeC": 760,
+    "viewC": 66078,
+    "date": "2024-10-12T23:38:25.043640Z",
+    "coinType": [
+      "Chainlink",
+      "LINK"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.79,
+    "followC": 885,
+    "likeC": 1080,
+    "viewC": 87981,
+    "date": "2024-10-11T23:38:25.043640Z",
+    "coinType": [
+      "Uniswap",
+      "UNI"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.9,
+    "followC": 177,
+    "likeC": 1036,
+    "viewC": 89064,
+    "date": "2024-10-10T23:38:25.043640Z",
+    "coinType": [
+      "Solana",
+      "SOL"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.15,
+    "followC": 2860,
+    "likeC": 1531,
+    "viewC": 83595,
+    "date": "2024-10-09T23:38:25.043640Z",
+    "coinType": [
+      "Aave",
+      "AAVE"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.53,
+    "followC": 3147,
+    "likeC": 1134,
+    "viewC": 38808,
+    "date": "2024-10-08T23:38:25.043640Z",
+    "coinType": [
+      "Ethereum",
+      "ETH"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.19,
+    "followC": 3736,
+    "likeC": 1339,
+    "viewC": 98532,
+    "date": "2024-10-07T23:38:25.043640Z",
+    "coinType": [
+      "Ripple",
+      "XRP"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.02,
+    "followC": 1296,
+    "likeC": 414,
+    "viewC": 5387,
+    "date": "2024-10-06T23:38:25.043640Z",
+    "coinType": [
+      "Avalanche",
+      "AVAX"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.88,
+    "followC": 3339,
+    "likeC": 1767,
+    "viewC": 57401,
+    "date": "2024-10-05T23:38:25.043640Z",
+    "coinType": [
+      "Chainlink",
+      "LINK"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.92,
+    "followC": 1738,
+    "likeC": 672,
+    "viewC": 60310,
+    "date": "2024-10-04T23:38:25.043640Z",
+    "coinType": [
+      "Stellar",
+      "XLM"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.41,
+    "followC": 4014,
+    "likeC": 1741,
+    "viewC": 17937,
+    "date": "2024-10-03T23:38:25.043640Z",
+    "coinType": [
+      "Tezos",
+      "XTZ"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.25,
+    "followC": 1866,
+    "likeC": 183,
+    "viewC": 3299,
+    "date": "2024-10-02T23:38:25.043640Z",
+    "coinType": [
+      "Aave",
+      "AAVE"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.98,
+    "followC": 192,
+    "likeC": 1142,
+    "viewC": 55524,
+    "date": "2024-10-01T23:38:25.043640Z",
+    "coinType": [
+      "Dogecoin",
+      "DOGE"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.62,
+    "followC": 739,
+    "likeC": 95,
+    "viewC": 49637,
+    "date": "2024-09-30T23:38:25.043640Z",
+    "coinType": [
+      "Cardano",
+      "ADA"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.57,
+    "followC": 3686,
+    "likeC": 1403,
+    "viewC": 79253,
+    "date": "2024-09-29T23:38:25.043640Z",
+    "coinType": [
+      "Chainlink",
+      "LINK"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.92,
+    "followC": 852,
+    "likeC": 249,
+    "viewC": 37367,
+    "date": "2024-09-28T23:38:25.043640Z",
+    "coinType": [
+      "Cosmos",
+      "ATOM"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.25,
+    "followC": 3231,
+    "likeC": 177,
+    "viewC": 16845,
+    "date": "2024-09-27T23:38:25.043640Z",
+    "coinType": [
+      "Polkadot",
+      "DOT"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.77,
+    "followC": 2692,
+    "likeC": 367,
+    "viewC": 68819,
+    "date": "2024-09-26T23:38:25.043640Z",
+    "coinType": [
+      "Stellar",
+      "XLM"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.01,
+    "followC": 2200,
+    "likeC": 924,
+    "viewC": 93814,
+    "date": "2024-09-25T23:38:25.043640Z",
+    "coinType": [
+      "Uniswap",
+      "UNI"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.77,
+    "followC": 304,
+    "likeC": 1753,
+    "viewC": 36686,
+    "date": "2024-09-24T23:38:25.043640Z",
+    "coinType": [
+      "Dogecoin",
+      "DOGE"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.97,
+    "followC": 538,
+    "likeC": 1303,
+    "viewC": 68761,
+    "date": "2024-09-23T23:38:25.043640Z",
+    "coinType": [
+      "Bitcoin Cash",
+      "BCH"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.22,
+    "followC": 2561,
+    "likeC": 95,
+    "viewC": 21845,
+    "date": "2024-09-22T23:38:25.043640Z",
+    "coinType": [
+      "VeChain",
+      "VET"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.1,
+    "followC": 2929,
+    "likeC": 900,
+    "viewC": 70850,
+    "date": "2024-09-21T23:38:25.043640Z",
+    "coinType": [
+      "Avalanche",
+      "AVAX"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.72,
+    "followC": 4016,
+    "likeC": 156,
+    "viewC": 99651,
+    "date": "2024-09-20T23:38:25.043640Z",
+    "coinType": [
+      "Bitcoin",
+      "BTC"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.57,
+    "followC": 2849,
+    "likeC": 451,
+    "viewC": 95693,
+    "date": "2024-09-19T23:38:25.043640Z",
+    "coinType": [
+      "Litecoin",
+      "LTC"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.41,
+    "followC": 646,
+    "likeC": 1051,
+    "viewC": 41110,
+    "date": "2024-09-18T23:38:25.043640Z",
+    "coinType": [
+      "Cardano",
+      "ADA"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.14,
+    "followC": 3666,
+    "likeC": 1001,
+    "viewC": 9704,
+    "date": "2024-09-17T23:38:25.043640Z",
+    "coinType": [
+      "Bitcoin",
+      "BTC"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.02,
+    "followC": 756,
+    "likeC": 674,
+    "viewC": 23489,
+    "date": "2024-09-16T23:38:25.043640Z",
+    "coinType": [
+      "VeChain",
+      "VET"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.52,
+    "followC": 2954,
+    "likeC": 354,
+    "viewC": 47548,
+    "date": "2024-09-15T23:38:25.043640Z",
+    "coinType": [
+      "Polygon",
+      "MATIC"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.91,
+    "followC": 1100,
+    "likeC": 1963,
+    "viewC": 14760,
+    "date": "2024-09-14T23:38:25.043640Z",
+    "coinType": [
+      "Uniswap",
+      "UNI"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.36,
+    "followC": 501,
+    "likeC": 184,
+    "viewC": 36357,
+    "date": "2024-09-13T23:38:25.043640Z",
+    "coinType": [
+      "Polkadot",
+      "DOT"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.97,
+    "followC": 4895,
+    "likeC": 1898,
+    "viewC": 16517,
+    "date": "2024-09-12T23:38:25.043640Z",
+    "coinType": [
+      "Litecoin",
+      "LTC"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.09,
+    "followC": 3664,
+    "likeC": 846,
+    "viewC": 89852,
+    "date": "2024-09-11T23:38:25.043640Z",
+    "coinType": [
+      "Aave",
+      "AAVE"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.57,
+    "followC": 2325,
+    "likeC": 1412,
+    "viewC": 81983,
+    "date": "2024-09-10T23:38:25.043640Z",
+    "coinType": [
+      "Bitcoin",
+      "BTC"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.61,
+    "followC": 3930,
+    "likeC": 954,
+    "viewC": 81039,
+    "date": "2024-09-09T23:38:25.043640Z",
+    "coinType": [
+      "Avalanche",
+      "AVAX"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.63,
+    "followC": 3359,
+    "likeC": 163,
+    "viewC": 34572,
+    "date": "2024-09-08T23:38:25.043640Z",
+    "coinType": [
+      "Tezos",
+      "XTZ"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.9,
+    "followC": 3069,
+    "likeC": 852,
+    "viewC": 44881,
+    "date": "2024-09-07T23:38:25.043640Z",
+    "coinType": [
+      "Bitcoin Cash",
+      "BCH"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.98,
+    "followC": 901,
+    "likeC": 1502,
+    "viewC": 33086,
+    "date": "2024-09-06T23:38:25.043640Z",
+    "coinType": [
+      "Polkadot",
+      "DOT"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.54,
+    "followC": 4080,
+    "likeC": 980,
+    "viewC": 52401,
+    "date": "2024-09-05T23:38:25.043640Z",
+    "coinType": [
+      "Polkadot",
+      "DOT"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.99,
+    "followC": 3930,
+    "likeC": 1438,
+    "viewC": 57498,
+    "date": "2024-09-04T23:38:25.043640Z",
+    "coinType": [
+      "Cosmos",
+      "ATOM"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.49,
+    "followC": 1480,
+    "likeC": 1678,
+    "viewC": 78479,
+    "date": "2024-09-03T23:38:25.043640Z",
+    "coinType": [
+      "Ethereum",
+      "ETH"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.37,
+    "followC": 1905,
+    "likeC": 817,
+    "viewC": 74813,
+    "date": "2024-09-02T23:38:25.043640Z",
+    "coinType": [
+      "Ethereum",
+      "ETH"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.35,
+    "followC": 4666,
+    "likeC": 1573,
+    "viewC": 6760,
+    "date": "2024-09-01T23:38:25.043640Z",
+    "coinType": [
+      "Cosmos",
+      "ATOM"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.79,
+    "followC": 1385,
+    "likeC": 1611,
+    "viewC": 65894,
+    "date": "2024-08-31T23:38:25.043640Z",
+    "coinType": [
+      "Ripple",
+      "XRP"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.24,
+    "followC": 3482,
+    "likeC": 209,
+    "viewC": 64742,
+    "date": "2024-08-30T23:38:25.043640Z",
+    "coinType": [
+      "Avalanche",
+      "AVAX"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.13,
+    "followC": 4626,
+    "likeC": 243,
+    "viewC": 32719,
+    "date": "2024-08-29T23:38:25.043640Z",
+    "coinType": [
+      "Ethereum",
+      "ETH"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.62,
+    "followC": 4463,
+    "likeC": 810,
+    "viewC": 3961,
+    "date": "2024-08-28T23:38:25.043640Z",
+    "coinType": [
+      "Tezos",
+      "XTZ"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.81,
+    "followC": 4942,
+    "likeC": 220,
+    "viewC": 62242,
+    "date": "2024-08-27T23:38:25.043640Z",
+    "coinType": [
+      "Monero",
+      "XMR"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.44,
+    "followC": 325,
+    "likeC": 287,
+    "viewC": 50361,
+    "date": "2024-08-26T23:38:25.043640Z",
+    "coinType": [
+      "Solana",
+      "SOL"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.21,
+    "followC": 1556,
+    "likeC": 1080,
+    "viewC": 90576,
+    "date": "2024-08-25T23:38:25.043640Z",
+    "coinType": [
+      "Tezos",
+      "XTZ"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.79,
+    "followC": 4926,
+    "likeC": 1996,
+    "viewC": 21165,
+    "date": "2024-08-24T23:38:25.043640Z",
+    "coinType": [
+      "Ethereum",
+      "ETH"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.18,
+    "followC": 642,
+    "likeC": 671,
+    "viewC": 20024,
+    "date": "2024-08-23T23:38:25.043640Z",
+    "coinType": [
+      "Bitcoin Cash",
+      "BCH"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.66,
+    "followC": 220,
+    "likeC": 1490,
+    "viewC": 45271,
+    "date": "2024-08-22T23:38:25.043640Z",
+    "coinType": [
+      "Litecoin",
+      "LTC"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.27,
+    "followC": 2583,
+    "likeC": 916,
+    "viewC": 1353,
+    "date": "2024-08-21T23:38:25.043640Z",
+    "coinType": [
+      "Monero",
+      "XMR"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.77,
+    "followC": 3704,
+    "likeC": 1382,
+    "viewC": 25831,
+    "date": "2024-08-20T23:38:25.043640Z",
+    "coinType": [
+      "VeChain",
+      "VET"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.4,
+    "followC": 179,
+    "likeC": 576,
+    "viewC": 89117,
+    "date": "2024-08-19T23:38:25.043640Z",
+    "coinType": [
+      "Polygon",
+      "MATIC"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.85,
+    "followC": 4349,
+    "likeC": 1344,
+    "viewC": 40913,
+    "date": "2024-08-18T23:38:25.043640Z",
+    "coinType": [
+      "Stellar",
+      "XLM"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.38,
+    "followC": 3986,
+    "likeC": 61,
+    "viewC": 36123,
+    "date": "2024-08-17T23:38:25.043640Z",
+    "coinType": [
+      "Cardano",
+      "ADA"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.18,
+    "followC": 1794,
+    "likeC": 532,
+    "viewC": 90311,
+    "date": "2024-08-16T23:38:25.043640Z",
+    "coinType": [
+      "Dogecoin",
+      "DOGE"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.23,
+    "followC": 893,
+    "likeC": 926,
+    "viewC": 72495,
+    "date": "2024-08-15T23:38:25.043640Z",
+    "coinType": [
+      "Solana",
+      "SOL"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.87,
+    "followC": 2680,
+    "likeC": 838,
+    "viewC": 11184,
+    "date": "2024-08-14T23:38:25.043640Z",
+    "coinType": [
+      "Bitcoin",
+      "BTC"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.27,
+    "followC": 3935,
+    "likeC": 1287,
+    "viewC": 31224,
+    "date": "2024-08-13T23:38:25.043640Z",
+    "coinType": [
+      "Bitcoin",
+      "BTC"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.7,
+    "followC": 2644,
+    "likeC": 874,
+    "viewC": 11531,
+    "date": "2024-08-12T23:38:25.043640Z",
+    "coinType": [
+      "Bitcoin",
+      "BTC"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.19,
+    "followC": 1731,
+    "likeC": 1218,
+    "viewC": 20585,
+    "date": "2024-08-11T23:38:25.043640Z",
+    "coinType": [
+      "Cosmos",
+      "ATOM"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.07,
+    "followC": 3304,
+    "likeC": 824,
+    "viewC": 35025,
+    "date": "2024-08-10T23:38:25.043640Z",
+    "coinType": [
+      "Cardano",
+      "ADA"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.33,
+    "followC": 4525,
+    "likeC": 262,
+    "viewC": 40641,
+    "date": "2024-08-09T23:38:25.043640Z",
+    "coinType": [
+      "Tron",
+      "TRX"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.12,
+    "followC": 2418,
+    "likeC": 1238,
+    "viewC": 30442,
+    "date": "2024-08-08T23:38:25.043640Z",
+    "coinType": [
+      "Chainlink",
+      "LINK"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.86,
+    "followC": 590,
+    "likeC": 1697,
+    "viewC": 99372,
+    "date": "2024-08-07T23:38:25.043640Z",
+    "coinType": [
+      "Bitcoin Cash",
+      "BCH"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.67,
+    "followC": 1211,
+    "likeC": 1668,
+    "viewC": 33700,
+    "date": "2024-08-06T23:38:25.043640Z",
+    "coinType": [
+      "Litecoin",
+      "LTC"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.15,
+    "followC": 545,
+    "likeC": 1387,
+    "viewC": 63698,
+    "date": "2024-08-05T23:38:25.043640Z",
+    "coinType": [
+      "Tron",
+      "TRX"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.91,
+    "followC": 1191,
+    "likeC": 1213,
+    "viewC": 39377,
+    "date": "2024-08-04T23:38:25.043640Z",
+    "coinType": [
+      "Tezos",
+      "XTZ"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.05,
+    "followC": 137,
+    "likeC": 1610,
+    "viewC": 2254,
+    "date": "2024-08-03T23:38:25.043640Z",
+    "coinType": [
+      "Cardano",
+      "ADA"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.74,
+    "followC": 4030,
+    "likeC": 1151,
+    "viewC": 16720,
+    "date": "2024-08-02T23:38:25.043640Z",
+    "coinType": [
+      "Ethereum",
+      "ETH"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.56,
+    "followC": 3834,
+    "likeC": 1180,
+    "viewC": 62085,
+    "date": "2024-08-01T23:38:25.043640Z",
+    "coinType": [
+      "Solana",
+      "SOL"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.3,
+    "followC": 339,
+    "likeC": 1456,
+    "viewC": 56277,
+    "date": "2024-07-31T23:38:25.043640Z",
+    "coinType": [
+      "Dogecoin",
+      "DOGE"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.81,
+    "followC": 2044,
+    "likeC": 451,
+    "viewC": 52311,
+    "date": "2024-07-30T23:38:25.043640Z",
+    "coinType": [
+      "Ripple",
+      "XRP"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.7,
+    "followC": 1191,
+    "likeC": 996,
+    "viewC": 71502,
+    "date": "2024-07-29T23:38:25.043640Z",
+    "coinType": [
+      "Stellar",
+      "XLM"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.27,
+    "followC": 2473,
+    "likeC": 63,
+    "viewC": 20785,
+    "date": "2024-07-28T23:38:25.043640Z",
+    "coinType": [
+      "Polygon",
+      "MATIC"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.92,
+    "followC": 4161,
+    "likeC": 422,
+    "viewC": 97546,
+    "date": "2024-07-27T23:38:25.043640Z",
+    "coinType": [
+      "Cosmos",
+      "ATOM"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.31,
+    "followC": 912,
+    "likeC": 1835,
+    "viewC": 74127,
+    "date": "2024-07-26T23:38:25.043640Z",
+    "coinType": [
+      "Dogecoin",
+      "DOGE"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.91,
+    "followC": 2948,
+    "likeC": 1094,
+    "viewC": 84690,
+    "date": "2024-07-25T23:38:25.043640Z",
+    "coinType": [
+      "Uniswap",
+      "UNI"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.93,
+    "followC": 2551,
+    "likeC": 683,
+    "viewC": 29721,
+    "date": "2024-07-24T23:38:25.043640Z",
+    "coinType": [
+      "Ethereum",
+      "ETH"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.58,
+    "followC": 3392,
+    "likeC": 808,
+    "viewC": 73514,
+    "date": "2024-07-23T23:38:25.043640Z",
+    "coinType": [
+      "Stellar",
+      "XLM"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.53,
+    "followC": 4906,
+    "likeC": 277,
+    "viewC": 10041,
+    "date": "2024-07-22T23:38:25.043640Z",
+    "coinType": [
+      "Chainlink",
+      "LINK"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.79,
+    "followC": 4806,
+    "likeC": 1952,
+    "viewC": 17334,
+    "date": "2024-07-21T23:38:25.043640Z",
+    "coinType": [
+      "Bitcoin",
+      "BTC"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.35,
+    "followC": 2441,
+    "likeC": 1083,
+    "viewC": 77874,
+    "date": "2024-07-20T23:38:25.043640Z",
+    "coinType": [
+      "Ripple",
+      "XRP"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.06,
+    "followC": 155,
+    "likeC": 996,
+    "viewC": 95041,
+    "date": "2024-07-19T23:38:25.043640Z",
+    "coinType": [
+      "Aave",
+      "AAVE"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.87,
+    "followC": 1997,
+    "likeC": 1174,
+    "viewC": 22779,
+    "date": "2024-07-18T23:38:25.043640Z",
+    "coinType": [
+      "Bitcoin",
+      "BTC"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.93,
+    "followC": 3219,
+    "likeC": 348,
+    "viewC": 63403,
+    "date": "2024-07-17T23:38:25.043640Z",
+    "coinType": [
+      "Solana",
+      "SOL"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.46,
+    "followC": 1386,
+    "likeC": 314,
+    "viewC": 51548,
+    "date": "2024-07-16T23:38:25.043640Z",
+    "coinType": [
+      "Tezos",
+      "XTZ"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.02,
+    "followC": 1790,
+    "likeC": 176,
+    "viewC": 81599,
+    "date": "2024-07-15T23:38:25.043640Z",
+    "coinType": [
+      "VeChain",
+      "VET"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.22,
+    "followC": 2010,
+    "likeC": 1635,
+    "viewC": 66501,
+    "date": "2024-07-14T23:38:25.043640Z",
+    "coinType": [
+      "Ethereum",
+      "ETH"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.08,
+    "followC": 2089,
+    "likeC": 1875,
+    "viewC": 15181,
+    "date": "2024-07-13T23:38:25.043640Z",
+    "coinType": [
+      "Solana",
+      "SOL"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.78,
+    "followC": 2341,
+    "likeC": 1666,
+    "viewC": 65240,
+    "date": "2024-07-12T23:38:25.043640Z",
+    "coinType": [
+      "Polkadot",
+      "DOT"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.76,
+    "followC": 1115,
+    "likeC": 1127,
+    "viewC": 53943,
+    "date": "2024-07-11T23:38:25.043640Z",
+    "coinType": [
+      "Bitcoin",
+      "BTC"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.93,
+    "followC": 838,
+    "likeC": 1872,
+    "viewC": 10379,
+    "date": "2024-07-10T23:38:25.043640Z",
+    "coinType": [
+      "Cosmos",
+      "ATOM"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.01,
+    "followC": 3972,
+    "likeC": 1232,
+    "viewC": 75434,
+    "date": "2024-07-09T23:38:25.043640Z",
+    "coinType": [
+      "Solana",
+      "SOL"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.3,
+    "followC": 2217,
+    "likeC": 1100,
+    "viewC": 54092,
+    "date": "2024-07-08T23:38:25.043640Z",
+    "coinType": [
+      "Bitcoin Cash",
+      "BCH"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.65,
+    "followC": 714,
+    "likeC": 1796,
+    "viewC": 31052,
+    "date": "2024-07-07T23:38:25.043640Z",
+    "coinType": [
+      "Tron",
+      "TRX"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 1.0,
+    "followC": 3788,
+    "likeC": 615,
+    "viewC": 68646,
+    "date": "2024-07-06T23:38:25.043640Z",
+    "coinType": [
+      "Solana",
+      "SOL"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.63,
+    "followC": 809,
+    "likeC": 332,
+    "viewC": 94427,
+    "date": "2024-07-05T23:38:25.043640Z",
+    "coinType": [
+      "Stellar",
+      "XLM"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.73,
+    "followC": 3518,
+    "likeC": 139,
+    "viewC": 75001,
+    "date": "2024-07-04T23:38:25.043640Z",
+    "coinType": [
+      "Ripple",
+      "XRP"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.73,
+    "followC": 267,
+    "likeC": 438,
+    "viewC": 44610,
+    "date": "2024-07-03T23:38:25.043640Z",
+    "coinType": [
+      "Bitcoin Cash",
+      "BCH"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.54,
+    "followC": 1267,
+    "likeC": 391,
+    "viewC": 61959,
+    "date": "2024-07-02T23:38:25.043640Z",
+    "coinType": [
+      "VeChain",
+      "VET"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.37,
+    "followC": 3174,
+    "likeC": 1284,
+    "viewC": 28922,
+    "date": "2024-07-01T23:38:25.043640Z",
+    "coinType": [
+      "Polkadot",
+      "DOT"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.54,
+    "followC": 1437,
+    "likeC": 1655,
+    "viewC": 79783,
+    "date": "2024-06-30T23:38:25.043640Z",
+    "coinType": [
+      "Ethereum",
+      "ETH"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.4,
+    "followC": 4921,
+    "likeC": 473,
+    "viewC": 31733,
+    "date": "2024-06-29T23:38:25.043640Z",
+    "coinType": [
+      "Ethereum",
+      "ETH"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.61,
+    "followC": 4294,
+    "likeC": 989,
+    "viewC": 7098,
+    "date": "2024-06-28T23:38:25.043640Z",
+    "coinType": [
+      "Monero",
+      "XMR"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.05,
+    "followC": 3570,
+    "likeC": 1259,
+    "viewC": 77890,
+    "date": "2024-06-27T23:38:25.043640Z",
+    "coinType": [
+      "Dogecoin",
+      "DOGE"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.9,
+    "followC": 4695,
+    "likeC": 377,
+    "viewC": 16010,
+    "date": "2024-06-26T23:38:25.043640Z",
+    "coinType": [
+      "Cardano",
+      "ADA"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.53,
+    "followC": 4376,
+    "likeC": 218,
+    "viewC": 47879,
+    "date": "2024-06-25T23:38:25.043640Z",
+    "coinType": [
+      "Cardano",
+      "ADA"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.95,
+    "followC": 3691,
+    "likeC": 299,
+    "viewC": 48142,
+    "date": "2024-06-24T23:38:25.043640Z",
+    "coinType": [
+      "Polkadot",
+      "DOT"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.22,
+    "followC": 807,
+    "likeC": 719,
+    "viewC": 34019,
+    "date": "2024-06-23T23:38:25.043640Z",
+    "coinType": [
+      "Cardano",
+      "ADA"
+    ]
+  },
+  {
+    "type": "bullish",
+    "coefficient": 0.58,
+    "followC": 4403,
+    "likeC": 1014,
+    "viewC": 36356,
+    "date": "2024-06-22T23:38:25.043640Z",
+    "coinType": [
+      "Tron",
+      "TRX"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.52,
+    "followC": 4471,
+    "likeC": 1784,
+    "viewC": 48043,
+    "date": "2024-06-21T23:38:25.043640Z",
+    "coinType": [
+      "Tron",
+      "TRX"
+    ]
+  },
+  {
+    "type": "bearish",
+    "coefficient": 0.5,
+    "followC": 2490,
+    "likeC": 1569,
+    "viewC": 95141,
+    "date": "2024-06-20T23:38:25.043640Z",
+    "coinType": [
+      "Dogecoin",
+      "DOGE"
+    ]
+  },
+  {
+    "type": "neutral",
+    "coefficient": 0.03,
+    "followC": 1444,
+    "likeC": 848,
+    "viewC": 35457,
+    "date": "2024-06-19T23:38:25.043640Z",
+    "coinType": [
+      "Polygon",
+      "MATIC"
+    ]
+  }
+]
