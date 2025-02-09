@@ -8,7 +8,9 @@ def test_api():
         "texts": [
             "Bitcoin is looking very bullish today, breaking above 50k resistance!",
             "This crypto market is crashing hard, everything is going down",
-            "No major price movement today, market seems stable"
+            "No major price movement today, market seems stable",
+            "I just bought some ETH, let's see how it goes",
+            "I think BTC will stay consistent for a while"
         ]
     }
     
