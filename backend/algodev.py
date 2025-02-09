@@ -1,153 +1,208 @@
-import json
 from datetime import datetime
 import math
+from typing import Dict, List, Optional
+from pydantic import BaseModel
 
-
-# ----------------------------------------------------
-#  Global Aggregator:
-#    aggregator[coin_symbol] = {
-#      "bullish_total": 0.0,
-#      "bearish_total": 0.0,
-#      "neutral_count": 0
-#    }
-# ----------------------------------------------------
-aggregator = {}  # We’ll update this for each coin
-
-
-def collect_data_from_json(json_string):
-    """
-    Parses the JSON string and extracts relevant fields.
-    """
-    data = json.loads(json_string)
+class SentimentConfig(BaseModel):
+    """Configuration for sentiment analysis weights"""
     
-    # Convert the date string to a datetime object (if possible)
-    try:
-        date_obj = datetime.fromisoformat(data["date"].replace("Z", ""))
-    except (ValueError, KeyError):
-        # Fallback if date parsing fails or date key missing
-        date_obj = datetime.now()
+    # Main component weights (should sum to 1)
+    SENTIMENT_WEIGHT: float = 0.6  # Increased weight for sentiment due to scraped data
+    ENGAGEMENT_WEIGHT: float = 0.4  # Decreased since engagement metrics might be less reliable
     
-    return {
-        "type": data.get("type", "neutral"),
-        "coefficient": float(data.get("coefficient", 0.0)),
-        "followC": int(data.get("followC", 0)),
-        "likeC": int(data.get("likeC", 0)),
-        "viewC": int(data.get("viewC", 1)),  # avoid zero division
-        "date": date_obj,
-        "coinType": data.get("coinType", [])
-    }
+    # Engagement metric weights (should sum to 1)
+    FOLLOW_WEIGHT: float = 0.3
+    LIKE_WEIGHT: float = 0.4    # Increased weight for likes as they're often more reliable
+    VIEW_WEIGHT: float = 0.3
+    
+    # Time decay configuration
+    TIME_DECAY_ALPHA: float = 0.1
+    MAX_DAYS_OLD: int = 7  # Maximum age of signals to consider
 
-
-def process_sentiment_data(coin_data, alpha=0.1):
-    """
-    Computes a sentiment-based percentage (the old "potential price change").
-    Then updates our global aggregator with bullish, bearish, or neutral data.
-    """
-    # 1. Determine sentiment factor (+1 for bullish, -1 for bearish, 0 for neutral)
-    sentiment_type = coin_data["type"].lower()
-    if sentiment_type == "bullish":
-        sentiment_factor = 1
-    elif sentiment_type == "bearish":
-        sentiment_factor = -1
-    else:
-        sentiment_factor = 0
-
-    # 2. Engagement ratio
-    follow_count = coin_data["followC"]
-    like_count   = coin_data["likeC"]
-    view_count   = coin_data["viewC"]
-    engagement_ratio = (follow_count + like_count) / float(view_count)
-
-    # 3. Base score
-    base_score = sentiment_factor * coin_data["coefficient"]
-
-    # 4. Time decay factor
-    now = datetime.now()
-    time_diff_days = (now - coin_data["date"]).total_seconds() / 86400.0
-    time_factor = math.exp(-alpha * time_diff_days)
-
-    # 5. Calculate final score -> potential price change in percentage
-    final_score = base_score * engagement_ratio * time_factor
-    potential_price_change_percent = final_score * 100
-
-    # 6. Update aggregator for each coin symbol in coin_data["coinType"]
-    for coin_symbol in coin_data["coinType"]:
-        # Make sure the aggregator has an entry for this coin
-        if coin_symbol not in aggregator:
-            aggregator[coin_symbol] = {
-                "bullish_total": 0.0,
-                "bearish_total": 0.0,
-                "neutral_count": 0
+class CryptoSentimentAnalyzer:
+    def __init__(self, config: Optional[SentimentConfig] = None):
+        self.config = config or SentimentConfig()
+        self.aggregator: Dict[str, Dict] = {}
+    
+    def normalize_engagement_metric(self, value: float) -> float:
+        """Normalize engagement metrics using relative scaling"""
+        if value <= 0:
+            return 0
+        return math.log1p(value) / math.log1p(value * 2)  # Normalizes between 0 and 1
+    
+    def calculate_time_decay(self, date: datetime) -> float:
+        """Calculate time decay factor based on signal age"""
+        time_diff_days = (datetime.now() - date).total_seconds() / 86400.0
+        if time_diff_days > self.config.MAX_DAYS_OLD:
+            return 0
+        return math.exp(-self.config.TIME_DECAY_ALPHA * time_diff_days)
+    
+    def calculate_engagement_score(self, follow_count: int, like_count: int, 
+                                 view_count: int) -> float:
+        """Calculate weighted engagement score without minimum thresholds"""
+        # Normalize each metric
+        norm_follows = self.normalize_engagement_metric(follow_count)
+        norm_likes = self.normalize_engagement_metric(like_count)
+        norm_views = self.normalize_engagement_metric(view_count)
+        
+        # Calculate weighted engagement score
+        engagement_score = (
+            norm_follows * self.config.FOLLOW_WEIGHT +
+            norm_likes * self.config.LIKE_WEIGHT +
+            norm_views * self.config.VIEW_WEIGHT
+        )
+        
+        return engagement_score
+    
+    def map_sentiment_to_value(self, sentiment_type: str, coefficient: float) -> float:
+        """Map sentiment types to numerical values with confidence weighting"""
+        base_sentiment = {
+            "bullish": 1.0,
+            "bearish": -1.0,
+            "neutral": 0.0
+        }.get(sentiment_type.lower(), 0.0)
+        
+        return base_sentiment * coefficient
+    
+    def process_sentiment_data(self, data: Dict) -> Dict[str, float]:
+        """Process a single piece of sentiment data"""
+        # Extract basic data
+        sentiment_type = data["type"]
+        coefficient = float(data["coefficient"])
+        date = data["date"]
+        
+        # Calculate components
+        sentiment_value = self.map_sentiment_to_value(sentiment_type, coefficient)
+        time_decay = self.calculate_time_decay(date)
+        
+        if time_decay == 0:  # Skip if too old
+            return {}
+        
+        engagement_score = self.calculate_engagement_score(
+            data["followC"],
+            data["likeC"],
+            data["viewC"]
+        )
+        
+        # Calculate final sentiment score
+        final_score = (
+            sentiment_value * self.config.SENTIMENT_WEIGHT +
+            engagement_score * self.config.ENGAGEMENT_WEIGHT
+        ) * time_decay
+        
+        # Prepare results for each coin
+        results = {}
+        for coin in data["coinType"]:
+            results[coin] = final_score
+            
+            # Update aggregator
+            if coin not in self.aggregator:
+                self.aggregator[coin] = {
+                    "positive_count": 0,
+                    "negative_count": 0,
+                    "neutral_count": 0,
+                    "total_sentiment": 0.0,
+                    "weighted_volume": 0.0,
+                    "recent_signals": []
+                }
+            
+            # Update counters
+            if final_score > 0:
+                self.aggregator[coin]["positive_count"] += 1
+            elif final_score < 0:
+                self.aggregator[coin]["negative_count"] += 1
+            else:
+                self.aggregator[coin]["neutral_count"] += 1
+            
+            self.aggregator[coin]["total_sentiment"] += final_score
+            self.aggregator[coin]["weighted_volume"] += abs(final_score)
+            
+            self.aggregator[coin]["recent_signals"].append({
+                "score": final_score,
+                "timestamp": date
+            })
+            
+            self.aggregator[coin]["recent_signals"] = [
+                signal for signal in self.aggregator[coin]["recent_signals"]
+                if (datetime.now() - signal["timestamp"]).days <= self.config.MAX_DAYS_OLD
+            ]
+        
+        return results
+    
+    def calculate_trend_strength(self, signals: List[Dict]) -> float:
+        if not signals:
+            return 0.0
+            
+        total_weighted_score = 0.0
+        total_weight = 0.0
+        
+        for i, signal in enumerate(sorted(signals, key=lambda x: x["timestamp"])):
+            weight = math.exp(i / len(signals))  
+            total_weighted_score += signal["score"] * weight
+            total_weight += weight
+            
+        return total_weighted_score / total_weight if total_weight > 0 else 0.0
+    
+    def get_coin_analysis(self) -> Dict[str, Dict]:
+        """Get final analysis for all coins"""
+        results = {}
+        for coin, data in self.aggregator.items():
+            total_signals = data["positive_count"] + data["negative_count"] + data["neutral_count"]
+            if total_signals == 0:
+                continue
+            
+            # Calculate sentiment metrics
+            avg_sentiment = data["total_sentiment"] / total_signals
+            sentiment_volume = data["weighted_volume"] / total_signals
+            trend_strength = self.calculate_trend_strength(data["recent_signals"])
+            
+            # Calculate agreement ratio (how consistent the signals are)
+            dominant_direction = "positive" if data["positive_count"] > data["negative_count"] else "negative"
+            if dominant_direction == "positive":
+                agreement_ratio = data["positive_count"] / total_signals
+            else:
+                agreement_ratio = data["negative_count"] / total_signals
+            
+            results[coin] = {
+                "average_sentiment": avg_sentiment,
+                "sentiment_volume": sentiment_volume,
+                "trend_strength": trend_strength,
+                "agreement_ratio": agreement_ratio,
+                "signal_counts": {
+                    "positive": data["positive_count"],
+                    "negative": data["negative_count"],
+                    "neutral": data["neutral_count"],
+                    "total": total_signals
+                },
+                "recommendation": {
+                    "action": "buy" if avg_sentiment > 0.2 and trend_strength > 0 else
+                             "sell" if avg_sentiment < -0.2 and trend_strength < 0 else
+                             "hold",
+                    "confidence": min(1.0, agreement_ratio * math.sqrt(total_signals) / 10)
+                }
             }
         
-        if sentiment_factor > 0:   # bullish
-            aggregator[coin_symbol]["bullish_total"] += potential_price_change_percent
-        elif sentiment_factor < 0: # bearish
-            aggregator[coin_symbol]["bearish_total"] += potential_price_change_percent
-        else:                      # neutral
-            aggregator[coin_symbol]["neutral_count"] += 1
-
-
-def calculate_final_change_for_coins():
-    """
-    For each coin in aggregator, calculate:
-      overall_percentage_change = bullish_total - bearish_total
-      final_change = (overall_percentage_change * 100) / neutral_count
-    and return or print the results.
-    """
-    results = {}
-    for coin_symbol, data in aggregator.items():
-        bullish_total = data["bullish_total"]
-        bearish_total = data["bearish_total"]
-        neutral_count = data["neutral_count"]
-
-        overall_percentage_change = bullish_total - bearish_total
-        
-        # Avoid dividing by zero
-        if neutral_count > 0:
-            final_change = (overall_percentage_change * 100) / neutral_count
-        else:
-            final_change = 0.0  # or some fallback if no neutrals
-
-        results[coin_symbol] = {
-            "overall_percentage_change": overall_percentage_change,
-            "neutral_count": neutral_count,
-            "final_change": final_change
-        }
-    return results
-
-
-def run_tests_on_json_file(json_file_path, alpha=0.1):
-    """
-    Reads a JSON file containing an array of items,
-    calls process_sentiment_data on each,
-    then calculates final changes for all coins.
-    """
-    with open(json_file_path, 'r') as f:
-        data_list = json.load(f)
+        return results
     
-    if not isinstance(data_list, list):
-        raise ValueError("Expected the JSON file to contain a list of items.")
+    def reset_aggregator(self):
+        """Reset the aggregator for new analysis"""
+        self.aggregator = {}
 
-    # Process each item
-    for i, item in enumerate(data_list, start=1):
-        item_json = json.dumps(item)  # turn item back into a JSON string
-        coin_data = collect_data_from_json(item_json)
-        process_sentiment_data(coin_data, alpha=alpha)
+async def analyze_tweet_sentiment(tweet_data: Dict) -> Dict:
+    """Analyze a single tweet - for FastAPI endpoint"""
+    analyzer = CryptoSentimentAnalyzer()
+    sentiment_scores = analyzer.process_sentiment_data(tweet_data)
+    
+    return {
+        "sentiment_scores": sentiment_scores,
+        "coin_analysis": analyzer.get_coin_analysis()
+    }
 
-    # Now compute final changes
-    results = calculate_final_change_for_coins()
-
-    # Print results
-    print("\n======== Final Results Per Coin ========")
-    for coin_symbol, result_data in results.items():
-        print(f"Coin: {coin_symbol}")
-        print(f"  Overall % Change (Bullish - Bearish): {result_data['overall_percentage_change']:.2f}")
-        print(f"  Neutral Count: {result_data['neutral_count']}")
-        print(f"  Final Change: {result_data['final_change']:.2f}\n")
-
-
-if __name__ == "__main__":
-    # Example usage: pass in a sample JSON file with multiple entries
-    sample_file_path = "sample_crypto_data.json"
-    run_tests_on_json_file(sample_file_path, alpha=0.1)
+def run_batch_analysis(data_list: List[Dict]) -> Dict:
+    """Run analysis on a batch of scraped data"""
+    analyzer = CryptoSentimentAnalyzer()
+    
+    for item in data_list:
+        analyzer.process_sentiment_data(item)
+    
+    return analyzer.get_coin_analysis()
