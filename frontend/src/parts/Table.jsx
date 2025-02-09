@@ -73,7 +73,9 @@ export const columns = [
     accessorKey: "id",
     header: "Coin",
     cell: ({ row }) => (
-      <div className="capitalize">{"$" + row.getValue("id")}</div>
+      <div className="capitalize"
+      onClick={() => alert(`You clicked on ${row.getValue("name")}`)}
+      >{"$" + row.getValue("id")}</div>
     ),
   },
   {
