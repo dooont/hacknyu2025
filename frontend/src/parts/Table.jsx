@@ -1,7 +1,5 @@
 "use client";
 
-import * as React from "react";
-import "../parts-css/Table.css"; // Import the CSS file
 import {
   flexRender,
   getCoreRowModel,
@@ -10,18 +8,16 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react";
+import { ArrowUpDown, ChevronDown } from "lucide-react";
+import * as React from "react";
+import "../parts-css/Table.css"; // Import the CSS file
 
 import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
+  DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
 import {
@@ -35,81 +31,66 @@ import {
 
 const data = [
   {
-    id: "m5gr84i9",
-    amount: 316,
-    status: "success",
-    email: "ken99@yahoo.com",
+    "id": "BTC",
+    "name": "Bitcoin",
+    "valuation": 28500,
+    "delta": 2.5,
+    "confidence": 65
   },
   {
-    id: "3u1reuv4",
-    amount: 242,
-    status: "success",
-    email: "Abe45@gmail.com",
+    "id": "ETH",
+    "name": "Ethereum",
+    "valuation": 1800,
+    "delta": -1.2,
+    "confidence": 55
   },
   {
-    id: "derv1ws0",
-    amount: 837,
-    status: "processing",
-    email: "Monserrat44@gmail.com",
+    "id": "XRP",
+    "name": "XRP",
+    "valuation": 0.56,
+    "delta": 6.3,
+    "confidence": 70
   },
   {
-    id: "5kma53ae",
-    amount: 874,
-    status: "success",
-    email: "Silas22@gmail.com",
+    "id": "DOGE",
+    "name": "Dogecoin",
+    "valuation": 0.081,
+    "delta": -3.8,
+    "confidence": 60
   },
   {
-    id: "bhqecj4p",
-    amount: 721,
-    status: "failed",
-    email: "carmella@hotmail.com",
-  },
+    "id": "SOL",
+    "name": "Solana",
+    "valuation": 24.5,
+    "delta": 4.1,
+    "confidence": 75
+  }
 ];
 
+
 export const columns = [
-  // {
-  //   id: "select",
-  //   header: ({ table }) => (
-  //     <Checkbox
-  //       checked={
-  //         table.getIsAllPageRowsSelected() ||
-  //         (table.getIsSomePageRowsSelected() && "indeterminate")
-  //       }
-  //       onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
-  //       aria-label="Select all"
-  //     />
-  //   ),
-  //   cell: ({ row }) => (
-  //     <Checkbox
-  //       checked={row.getIsSelected()}
-  //       onCheckedChange={(value) => row.toggleSelected(!!value)}
-  //       aria-label="Select row"
-  //     />
-  //   ),
-  //   enableSorting: false,
-  //   enableHiding: false,
-  // },
   {
-    accessorKey: "status",
+    accessorKey: "id",
     header: "Coin",
     cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("status")}</div>
+      <div className="capitalize">{"$" + row.getValue("id")}</div>
     ),
   },
   {
-    accessorKey: "amount",
-    header: () => <div className="text-right">Valuation</div>,
-    cell: ({ row }) => {
-      const amount = parseFloat(row.getValue("amount"));
-
-      // Format the amount as a dollar amount
-      const formatted = new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "USD",
-      }).format(amount);
-
-      return <div className="text-right font-medium">{formatted}</div>;
+    accessorKey: "valuation",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+          className="text-right"
+        >
+          Value
+          <ArrowUpDown className="ml-1 h-4 w-2" />
+        </Button>
+      );
     },
+    cell: ({ row }) => <div className="text-center">{row.getValue("valuation") + "%"}</div>,
   },
   {
     accessorKey: "delta",
@@ -118,13 +99,14 @@ export const columns = [
         <Button
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+          className="text-right"
         >
           Delta
           <ArrowUpDown className="ml-1 h-4 w-2" />
         </Button>
       );
     },
-    cell: ({ row }) => <div className="lowercase">{row.getValue("delta")}</div>,
+    cell: ({ row }) => <div className="text-center">{row.getValue("delta") + "%"}</div>,
   },
   {
     accessorKey: "confidence",
@@ -139,52 +121,9 @@ export const columns = [
         </Button>
       );
     },
-    cell: ({ row }) => <div className="lowercase">{row.getValue("confidence")}</div>,
+    cell: ({ row }) => <div className="lowercase text-center">{row.getValue("confidence") + "%"}</div>,
   },
-  // {
-  //   id: "actions",
-  //   enableHiding: false,
-  //   cell: ({ row }) => {
-  //     const payment = row.original;
 
-  //     return (
-  //       <DropdownMenu>
-  //         <DropdownMenuTrigger asChild>
-  //           <Button variant="ghost" className="h-8 w-8 p-0">
-  //             <span className="sr-only">Open menu</span>
-  //             <MoreHorizontal className="h-4 w-4" />
-  //           </Button>
-  //         </DropdownMenuTrigger>
-  //         <DropdownMenuContent align="end">
-  //           <DropdownMenuLabel>Actions</DropdownMenuLabel>
-  //           <DropdownMenuItem
-  //             onClick={() => navigator.clipboard.writeText(payment.id)}
-  //           >
-  //             Copy payment ID
-  //           </DropdownMenuItem>
-  //           <DropdownMenuSeparator />
-  //           <DropdownMenuItem>View customer</DropdownMenuItem>
-  //           <DropdownMenuItem>View payment details</DropdownMenuItem>
-  //         </DropdownMenuContent>
-  //       </DropdownMenu>
-  //     );
-  //   },
-  // },
-    // {
-  //   accessorKey: "email",
-  //   header: ({ column }) => {
-  //     return (
-  //       <Button
-  //         variant="ghost"
-  //         onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-  //       >
-  //         Current Value
-  //         <ArrowUpDown className="ml-2 h-4 w-4" />
-  //       </Button>
-  //     );
-  //   },
-  //   cell: ({ row }) => <div className="lowercase">{row.getValue("email")}</div>,
-  // },
 ];
 
 export function DataTableDemo() {
@@ -217,9 +156,9 @@ export function DataTableDemo() {
       <div className="flex items-center py-4 space-x-2">
         <Input
           placeholder="Filter crypto currencies..."
-          value={(table.getColumn("email")?.getFilterValue()) ?? ""}
+          value={(table.getColumn("id")?.getFilterValue()) ?? ""}
           onChange={(event) =>
-            table.getColumn("email")?.setFilterValue(event.target.value)
+            table.getColumn("id")?.setFilterValue(event.target.value)
             // change these to crypto currency variables later
           }
           className="max-w-sm"
@@ -306,7 +245,7 @@ export function DataTableDemo() {
           {table.getFilteredSelectedRowModel().rows.length} of{" "}
           {table.getFilteredRowModel().rows.length} row(s) selected.
         </div>
-        <div className="space-x-2">
+        {/* <div className="space-x-2">
           <Button
             variant="outline"
             size="sm"
@@ -323,7 +262,7 @@ export function DataTableDemo() {
           >
             Next
           </Button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
