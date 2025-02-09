@@ -190,6 +190,30 @@ async def get_supported_coins():
     }
     return {"supported_coins": coin_mappings}
 
+@app.post("/analyze/price-prediction", response_model=Dict)
+async def predict_price_ranges(data: TweetData):
+    try:
+        # Get market data from CoinGecko
+        market_data = {}
+        for coin in data.coinType:
+            coingecko_id = map_coin_to_coingecko_id(coin)
+            if coingecko_id:
+                try:
+                    market_data[coin] = await coingecko.get_coin_data(coingecko_id)
+                    # Add historical data for volatility calculation
+                    market_data[coin]['historical_prices'] = await coingecko.get_historical_prices(coingecko_id)
+                    market_data[coin]['average_volume'] = await coingecko.get_average_volume(coingecko_id)
+                except HTTPException as e:
+                    if e.status_code != 429:
+                        market_data[coin] = {"error": str(e.detail)}
+
+        # Get combined analysis
+        analysis = await enhanced_analyze_tweet(data.dict(), market_data)
+        
+        return analysis
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 @app.get("/health")
 async def health_check():
     return {"status": "healthy"}
