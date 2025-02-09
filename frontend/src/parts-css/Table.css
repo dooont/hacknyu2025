@@ -77,3 +77,8 @@
   display: flex;
   gap: 0.5rem;
 }
+
+.table-container:hover {
+  color: orange;
+}
+

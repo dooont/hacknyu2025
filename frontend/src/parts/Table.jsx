@@ -29,6 +29,8 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
+const API_BASE = "http://localhost:8000/bitcoin-data";
+
 const data = [
   {
     "id": "BTC",
@@ -73,9 +75,15 @@ export const columns = [
     accessorKey: "id",
     header: "Coin",
     cell: ({ row }) => (
-      <div className="capitalize"
-      onClick={() => alert(`You clicked on ${row.getValue("name")}`)}
-      >{"$" + row.getValue("id")}</div>
+      <div
+        className="capitalize"
+        onClick={() => alert(`You clicked on ${row.getValue("id")}`)}
+        style={{ cursor: "pointer"}}
+        onMouseEnter={(e) => e.target.style.color = "blue"}
+        onMouseLeave={(e) => e.target.style.color = "black"}
+      >
+        {"$" + row.getValue("id")}
+      </div>
     ),
   },
   {
@@ -92,7 +100,7 @@ export const columns = [
         </Button>
       );
     },
-    cell: ({ row }) => <div className="text-center">{row.getValue("valuation") + "%"}</div>,
+    cell: ({ row }) => <div className="text-center">{"$" + row.getValue("valuation") + ".00"}</div>,
   },
   {
     accessorKey: "delta",
@@ -125,7 +133,51 @@ export const columns = [
     },
     cell: ({ row }) => <div className="lowercase text-center">{row.getValue("confidence") + "%"}</div>,
   },
-
+  {
+    accessorKey: "volatility",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          Volatility
+          <ArrowUpDown className="ml-1 h-4 w-2" />
+        </Button>
+      );
+    },
+    cell: ({ row }) => <div className="lowercase text-center">{row.getValue("volatility") + "%"}</div>,
+  },
+  {
+    accessorKey: "1-day",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          1-Day Range & Confidence
+          <ArrowUpDown className="ml-1 h-4 w-2" />
+        </Button>
+      );
+    },
+    cell: ({ row }) => <div className="lowercase text-center">{row.getValue("1-day") + "%"}</div>,
+  },
+  {
+    accessorKey: "7-day",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          7-Day Range & Confidence
+          <ArrowUpDown className="ml-1 h-4 w-2" />
+        </Button>
+      );
+    },
+    cell: ({ row }) => <div className="lowercase text-center">{row.getValue("7-day") + "%"}</div>,
+  },
 ];
 
 export function DataTableDemo() {
@@ -243,10 +295,10 @@ export function DataTableDemo() {
         </Table>
       </div>
       <div className="flex items-center justify-end space-x-2 py-4">
-        <div className="flex-1 text-sm text-muted-foreground">
+        {/* <div className="flex-1 text-sm text-muted-foreground">
           {table.getFilteredSelectedRowModel().rows.length} of{" "}
           {table.getFilteredRowModel().rows.length} row(s) selected.
-        </div>
+        </div> */}
         {/* <div className="space-x-2">
           <Button
             variant="outline"
