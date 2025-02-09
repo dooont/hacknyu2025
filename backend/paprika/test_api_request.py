@@ -11,6 +11,8 @@ from coinpaprika.exceptions import (
     CoinpaprikaAPIPaymentRequiredException,
     CoinpaprikaAPITooManyRequestsException,
     CoinpaprikaRequestException,
+    CoinpaprikaBadRequestException
+
 )
 
 client = Coinpaprika.Client()

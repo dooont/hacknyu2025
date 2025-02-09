@@ -74,19 +74,29 @@ export default function Chart() {
         </ChartContainer>
       </CardContent>
       <CardFooter className="card-footer flex space-x-2">
-        <Button>
+        <Button
+          onClick={() => alert("Real Time")}
+        >
           Real Time
         </Button >
-        <Button >
+        <Button
+          onClick={() => alert("1 Day")}
+        >
           1 Day
         </Button>
-        <Button >
+        <Button
+          onClick={() => alert("1 Day")}
+        >
           1 Week
         </Button>
-        <Button >
+        <Button
+          onClick={() => alert("1 Day")}
+        >
           1 Month
         </Button>
-        <Button >
+        <Button
+          onClick={() => alert("1 Day")}
+        >
           1 Year
         </Button>
       </CardFooter>
