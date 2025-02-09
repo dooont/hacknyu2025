@@ -1,29 +1,51 @@
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
+from bson import ObjectId
 from typing import List
+from datetime import datetime, timezone
+from motor.motor_asyncio import AsyncIOMotorClient
+import os
+from dotenv import load_dotenv
 from transformers import TextClassificationPipeline, AutoModelForSequenceClassification, AutoTokenizer
 
-# Initialize FastAPI app
-app = FastAPI(title="CryptoBERT API")
+load_dotenv()
+MONGO_URI = os.getenv("MONGO_URI")
+DB_NAME = os.getenv("DB_NAME")
+COLLECTION_NAME = os.getenv("COLLECTION_NAME")
 
-# Model configuration
-MODEL_NAME = "ElKulako/cryptobert"
+app = FastAPI(title="Crypto Sentiment API")
 
-class TextInput(BaseModel):
-    texts: List[str]
+client = AsyncIOMotorClient(MONGO_URI)
+db = client[DB_NAME]
+collection = db[COLLECTION_NAME]
 
-class SentimentResponse(BaseModel):
-    text: str
-    sentiment: str
-    score: float
+class TweetData(BaseModel):
+    tweet: str
+    followC: int
+    likeC: int
+    viewC: int
+    date: datetime
+    coinType: List[str]
 
-# Load model and create pipeline
+class SentimentData(BaseModel):
+    id: str = Field(alias="_id")
+    type: str
+    coefficient: float
+    followC: int
+    likeC: int
+    viewC: int
+    date: datetime
+    coinType: List[str]
+
+    class Config:
+        json_encoders = {ObjectId: str}
+
 @app.on_event("startup")
 async def load_model():
     global pipe
     try:
-        tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, use_fast=True)
-        model = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME, num_labels=3)
+        tokenizer = AutoTokenizer.from_pretrained("ElKulako/cryptobert", use_fast=True)
+        model = AutoModelForSequenceClassification.from_pretrained("ElKulako/cryptobert", num_labels=3)
         pipe = TextClassificationPipeline(
             model=model,
             tokenizer=tokenizer,
@@ -35,21 +57,35 @@ async def load_model():
         print(f"Error loading model: {str(e)}")
         raise HTTPException(status_code=500, detail="Model loading failed")
 
-@app.post("/predict", response_model=List[SentimentResponse])
-async def predict_sentiment(input_data: TextInput):
+@app.post("/analyze", response_model=dict)
+async def analyze_tweet(data: TweetData):
     try:
-        predictions = pipe(input_data.texts)
+        prediction = pipe(data.tweet)[0]
         
-        results = []
-        for text, pred in zip(input_data.texts, predictions):
-            results.append(
-                SentimentResponse(
-                    text=text,
-                    sentiment=pred['label'],
-                    score=float(pred['score'])
-                )
-            )
-        return results
+        sentiment_data = {
+            "type": prediction["label"],
+            "coefficient": float(prediction["score"]),
+            "followC": data.followC,
+            "likeC": data.likeC,
+            "viewC": data.viewC,
+            "date": data.date.astimezone(timezone.utc).isoformat(),
+            "coinType": data.coinType
+        }
+
+        result = await collection.insert_one(sentiment_data)
+        sentiment_data["_id"] = str(result.inserted_id)
+
+        return {"message": "Sentiment data saved successfully", "data": sentiment_data}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/sentiments", response_model=List[SentimentData])
+async def get_sentiments():
+    try:
+        sentiments = await collection.find().to_list(length=100)
+        for sentiment in sentiments:
+            sentiment["_id"] = str(sentiment["_id"])
+        return sentiments
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
